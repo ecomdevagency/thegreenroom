@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Contact Us - The Green Room</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Literata:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Literata:wght@400;500;600;700&amp;family=Fredoka:wght@600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
@@ -79,6 +79,7 @@
                         "base": "8px"
                     },
                     "fontFamily": {
+                        "fredoka": ["Fredoka", "sans-serif"],
                         "headline-lg-mobile": ["Plus Jakarta Sans"],
                         "headline-lg": ["Plus Jakarta Sans"],
                         "label-md": ["Plus Jakarta Sans"],
@@ -140,7 +141,7 @@
     </div>
     <div class="text-center flex-1">
         <a href="index.html">
-            <span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">The Green Room</span>
+            <span class="font-fredoka font-semibold text-[22px] text-primary tracking-tight">The Green Room</span>
         </a>
     </div>
     <div class="flex items-center gap-sm">
@@ -222,10 +223,7 @@
     </div>
 </footer>
 
-<!-- BottomNavBar (Mobile) -->
-<nav class="fixed bottom-0 left-0 w-full bg-surface-bright border-t border-surface-dim pb-safe pt-xs px-margin-mobile z-50 flex justify-between shadow-[0_-4px_16px_rgba(0,104,56,0.03)]">
-    <!-- Will be standardized and updated dynamically by store.js -->
-</nav>
+
 
 <script>
     // Subtle focus styles for form elements
