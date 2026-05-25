@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>The Green Room - Home</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Literata:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Literata:wght@400;500;600&amp;family=Fredoka:wght@600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
@@ -79,6 +79,7 @@
                         "gutter": "24px"
                     },
                     "fontFamily": {
+                        "fredoka": ["Fredoka", "sans-serif"],
                         "headline-md": ["Plus Jakarta Sans"],
                         "headline-xl": ["Plus Jakarta Sans"],
                         "headline-lg-mobile": ["Plus Jakarta Sans"],
@@ -123,7 +124,7 @@
     <!-- Dynamic Store Manager Script -->
     <script src="store.js" defer></script>
 </head>
-<body class="bg-surface text-on-surface font-body-md bg-texture relative min-h-screen pb-24 md:pb-0">
+<body class="bg-surface text-on-surface font-body-md bg-texture relative min-h-screen pb-8">
 
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300" id="top-nav">
@@ -132,7 +133,7 @@
             <span class="material-symbols-outlined text-primary text-2xl">menu</span>
         </button>
         <a href="index.html">
-            <h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary">The Green Room</h1>
+            <h1 class="font-fredoka font-semibold tracking-tight text-primary text-[22px]">The Green Room</h1>
         </a>
         <button aria-label="Shopping Bag" class="text-on-surface-variant hover:opacity-70 transition-opacity active:scale-95 transition-transform">
             <span class="material-symbols-outlined text-primary text-2xl">shopping_bag</span>
@@ -251,11 +252,11 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-surface-container-highest pt-lg pb-24 md:pb-xl px-margin-mobile md:px-margin-desktop">
+<footer class="bg-surface-container-highest pt-lg pb-lg md:pb-xl px-margin-mobile md:px-margin-desktop">
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-8 mb-12">
             <div class="col-span-2 md:col-span-1">
-                <h4 class="font-headline-md text-primary mb-4">The Green Room</h4>
+                <h4 class="font-fredoka font-semibold text-primary mb-4 text-[20px]">The Green Room</h4>
                 <p class="font-body-md text-on-surface-variant leading-relaxed">
                     Conscious living for the modern wanderer. Handcrafted in Bahrain with a commitment to sustainable elegance.
                 </p>
@@ -295,10 +296,7 @@
     </div>
 </footer>
 
-<!-- Bottom Navigation Bar (Mobile) -->
-<nav class="md:hidden fixed bottom-0 w-full bg-surface/95 backdrop-blur-md border-t border-outline/10 px-margin-mobile py-3 flex justify-between items-center z-50">
-    <!-- Will be standardized and updated dynamically by store.js -->
-</nav>
+
 
 <script>
     window.addEventListener('scroll', () => {
