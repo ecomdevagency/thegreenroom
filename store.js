@@ -406,8 +406,7 @@ function injectGlobalDrawers() {
 
   // Menu Drawer (Left)
   if (!document.getElementById('global-menu-drawer')) {
-    const _rawDrawerPath = window.location.pathname.split('/').pop() || '';
-    const currentPath = _rawDrawerPath || 'index.html';
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const isHome = currentPath === 'index.html' || currentPath === '' || currentPath === 'index';
     const isShop = currentPath === 'collection.html' || currentPath === 'collection';
     const isStory = currentPath === 'about.html' || currentPath === 'about';
@@ -609,8 +608,7 @@ function bindHeaderAndFooter() {
   });
 
   // Bottom Nav
-  const _rawNavPath = window.location.pathname.split('/').pop() || '';
-  const currentPath = _rawNavPath || 'index.html';
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav[class*="bottom-0"], div[class*="bottom-0"]').forEach(nav => {
     if (nav.id !== 'global-bottom-nav') nav.remove();
   });
@@ -972,8 +970,7 @@ document.addEventListener('DOMContentLoaded', () => {
   bindContactForm();
   bindNewsletterForms();
 
-  const _rawMainPath = window.location.pathname.split('/').pop() || '';
-  const currentPath = _rawMainPath || 'index.html';
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
   // Product detail pages (Non-blocking background hydration)
   if (currentPath.includes('green-tote')) {
@@ -990,7 +987,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Home page (SWR optimistic rendering)
-  if (currentPath === 'index.html' || currentPath === '' || currentPath === 'index') {
+  if (currentPath === 'index.html' || currentPath === '') {
     // 1. Instantly hydrate from cache (0ms delay)
     hydrateHomePage();
 
