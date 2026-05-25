@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Fredoka:wght@600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
@@ -81,6 +81,7 @@
                         "margin-mobile": "16px"
                     },
                     "fontFamily": {
+                        "fredoka": ["Fredoka", "sans-serif"],
                         "label-md": ["Plus Jakarta Sans"],
                         "headline-md": ["Plus Jakarta Sans"],
                         "body-lg": ["Literata"],
@@ -119,7 +120,7 @@
             <span class="material-symbols-outlined text-primary text-2xl">menu</span>
         </button>
         <a href="index.html">
-            <h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary">The Green Room</h1>
+            <h1 class="font-fredoka font-semibold tracking-tight text-primary text-[22px]">The Green Room</h1>
         </a>
         <button aria-label="Shopping Bag" class="text-on-surface-variant hover:opacity-70 transition-opacity active:scale-95 transition-transform">
             <span class="material-symbols-outlined text-primary text-2xl">shopping_bag</span>
@@ -128,7 +129,7 @@
 </header>
 
 <!-- Main Content Canvas -->
-<main class="flex-grow pb-24 pt-16">
+<main class="flex-grow pb-8 pt-16">
     <!-- Hero Section -->
     <section class="relative w-full aspect-[4/5] bg-surface-container-low flex items-end">
         <div class="absolute inset-0 w-full h-full">
@@ -250,10 +251,10 @@
     </section>
 
     <!-- Story Footer -->
-    <footer class="bg-surface px-margin-mobile pt-xl pb-24 border-t border-outline-variant/30">
+    <footer class="bg-surface px-margin-mobile pt-xl pb-12 border-t border-outline-variant/30">
         <div class="flex flex-col gap-10">
             <div class="flex flex-col gap-4">
-                <span class="font-headline-md text-primary font-bold tracking-tight">The Green Room</span>
+                <span class="font-fredoka font-semibold text-primary tracking-tight text-[20px]">The Green Room</span>
                 <p class="font-body-md text-on-surface-variant max-w-[280px] leading-relaxed">
                     Honoring the heritage of the Dilmun civilization through conscious craftsmanship and sustainable design.
                 </p>
@@ -284,10 +285,7 @@
     </footer>
 </main>
 
-<!-- BottomNavBar (Mobile) -->
-<nav class="md:hidden fixed bottom-0 w-full bg-surface/95 backdrop-blur-md border-t border-outline/10 px-margin-mobile py-3 flex justify-between items-center z-50">
-    <!-- Will be dynamically standardized by store.js -->
-</nav>
+
 
 </body>
 </html>
