@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Our Story - The Green Room</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#83d99d",
+                        "background": "#fcf9f4",
+                        "tertiary": "#6c320e",
+                        "outline": "#6f7a70",
+                        "on-surface": "#1c1c19",
+                        "on-primary-fixed-variant": "#00522b",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#645e4f",
+                        "tertiary-fixed": "#ffdbcb",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e8dfcc",
+                        "surface-variant": "#e5e2dd",
+                        "surface-dim": "#dcdad5",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#004d28",
+                        "on-primary-fixed": "#00210e",
+                        "on-tertiary-fixed-variant": "#723612",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3f4940",
+                        "surface-tint": "#0b6d3c",
+                        "surface-container-high": "#eae8e3",
+                        "tertiary-container": "#8a4823",
+                        "surface-container": "#f0ede9",
+                        "primary-fixed": "#9ef5b8",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "on-secondary-container": "#696253",
+                        "primary-fixed-dim": "#83d99d",
+                        "surface": "#fcf9f4",
+                        "inverse-surface": "#31302d",
+                        "surface-bright": "#fcf9f4",
+                        "on-tertiary-container": "#ffc5a8",
+                        "on-secondary-fixed-variant": "#4c4638",
+                        "on-secondary-fixed": "#1f1b10",
+                        "outline-variant": "#bec9be",
+                        "on-tertiary-fixed": "#341100",
+                        "inverse-on-surface": "#f3f0eb",
+                        "secondary-fixed": "#ebe1cf",
+                        "on-primary-container": "#8ee4a8",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1c19",
+                        "surface-container-low": "#f6f3ee",
+                        "primary-container": "#006838",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#cfc6b3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "lg": "48px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Literata"],
+                        "body-md": ["Literata"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); }
+    </style>
+    <!-- Shared dynamic store manager script -->
+    <script src="store.js" defer></script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300" id="top-nav">
+    <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full">
+        <button aria-label="Menu" class="text-on-surface-variant hover:opacity-70 transition-opacity active:scale-95 transition-transform">
+            <span class="material-symbols-outlined text-primary text-2xl">menu</span>
+        </button>
+        <a href="index.html">
+            <h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary">The Green Room</h1>
+        </a>
+        <button aria-label="Shopping Bag" class="text-on-surface-variant hover:opacity-70 transition-opacity active:scale-95 transition-transform">
+            <span class="material-symbols-outlined text-primary text-2xl">shopping_bag</span>
+        </button>
+    </div>
+</header>
+
+<!-- Main Content Canvas -->
+<main class="flex-grow pb-24 pt-16">
+    <!-- Hero Section -->
+    <section class="relative w-full aspect-[4/5] bg-surface-container-low flex items-end">
+        <div class="absolute inset-0 w-full h-full">
+            <img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7NHEAnDZlilQJdXRQIJKZPW3g_hK5LPC7X6fogEYNuWuTg1Eticawpl-booImObybhO79vVc1tDwUawlUqyCdpViPf0JuyaoB5npb6Ur2bQp8eTX6Fp-xqqfqW2kW0aWGfmY5ctc9e3g0p-31TbUvbTOmGwxoChGijNzdIEnxO__spdQ6nkHMOytYj3Z1c1wG9a4lLg17YagFBD6rFEhc_RO1_RMZgPKnsAr_RDjE9H23VBDMO17eOd0kxSjk4WBe6WM4sTXZddhL">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+        </div>
+        <div class="relative z-10 px-margin-mobile pb-lg w-full text-center">
+            <h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight font-bold">
+                Better Choices,<br>Beautiful Living
+            </h1>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="px-margin-mobile py-xl text-center flex flex-col items-center">
+        <span class="material-symbols-outlined text-primary/40 text-4xl mb-6">spa</span>
+        <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-md max-w-[280px]">
+            Born from functional purity and artistic heritage.
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-[320px] leading-[1.6]">
+            We believe that the objects we bring into our lives should respect the earth they came from. Every piece we create is an invitation to slow down and appreciate the inherent beauty of natural materials.
+        </p>
+    </section>
+
+    <!-- Consciously Crafted (Mobile Stack) -->
+    <section class="px-margin-mobile py-xl bg-surface-container-low rounded-t-[40px] border-t border-outline-variant/10">
+        <h3 class="font-headline-md text-headline-md-mobile text-primary mb-lg text-center font-bold">Consciously Crafted</h3>
+        <div class="flex flex-col gap-8">
+            <!-- Highlight 1 -->
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-[0_4px_20px_rgba(0,104,56,0.03)] border border-primary/10">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+                </div>
+                <div>
+                    <h4 class="font-headline-md text-[18px] text-primary mb-1 font-semibold">Organic Fibers</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-sm">
+                        Sourced responsibly, completely free from synthetic pesticides, nurturing both your skin and the soil.
+                    </p>
+                </div>
+            </div>
+            <!-- Highlight 2 -->
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-[0_4px_20px_rgba(0,104,56,0.03)] border border-primary/10">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">palette</span>
+                </div>
+                <div>
+                    <h4 class="font-headline-md text-[18px] text-primary mb-1 font-semibold">Botanical Dyes</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-sm">
+                        Colors extracted entirely from nature—roots, leaves, and petals—creating living hues that age gracefully.
+                    </p>
+                </div>
+            </div>
+            <!-- Highlight 3 -->
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 shrink-0 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-[0_4px_20px_rgba(0,104,56,0.03)] border border-primary/10">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">change_circle</span>
+                </div>
+                <div>
+                    <h4 class="font-headline-md text-[18px] text-primary mb-1 font-semibold">Circular Design</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed text-sm">
+                        Designed for longevity and eventual return to the earth, ensuring a closed-loop lifecycle for every product.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage: The Dilmun Spirit -->
+    <section class="px-margin-mobile py-xl">
+        <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-md text-center font-bold">The Dilmun Spirit</h3>
+        <div class="w-full rounded-2xl overflow-hidden mb-md shadow-md border border-outline-variant/10">
+            <img alt="" class="w-full h-auto object-cover aspect-[4/5]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClroeu2bZQacs6J9kr_Ya1SIqTfbvmDJaScOYts8kVQDROOWdMreCl7mUa0DgDFdjFipZaYrDD0oRkRq48h7OpPGkEG9rdDYQnBQF9tfFCKeVeMEotkMQrEXFuomIqlf9UNZeIh5YBF1tLw1l5pD1cmTo9O8ybHZzPsW5QpXWa5mSjgVs7OYWUVpwWexmTzbpx0Bv2Bx-IDNtIcJyNN2JiKOxpqaryB9p_dOiBK7hAFpC03tT7NP7Vj5swR7Ly5Y2I4NKxuj3wC9_T">
+        </div>
+        <p class="font-body-lg text-body-lg text-on-surface-variant leading-[1.6] text-center">
+            Inspired by ancient trade routes and timeless craftsmanship, our aesthetic pays homage to the Dilmun civilization—a beacon of cultural exchange and natural reverence. We carry this spirit forward in every stitch.
+        </p>
+    </section>
+
+    <!-- Global Impact Grid -->
+    <section class="px-margin-mobile pb-xl">
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-surface-container-low rounded-xl p-6 text-center flex flex-col items-center justify-center shadow-[0_4px_24px_rgba(0,104,56,0.02)] border border-outline-variant/10">
+                <span class="material-symbols-outlined text-primary mb-2 opacity-80">forest</span>
+                <span class="font-headline-lg-mobile text-headline-lg-mobile text-primary block mb-1 font-bold">15k</span>
+                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest text-[10px]">Trees Planted</span>
+            </div>
+            <div class="bg-surface-container-low rounded-xl p-6 text-center flex flex-col items-center justify-center shadow-[0_4px_24px_rgba(0,104,56,0.02)] border border-outline-variant/10">
+                <span class="material-symbols-outlined text-primary mb-2 opacity-80">handshake</span>
+                <span class="font-headline-lg-mobile text-headline-lg-mobile text-primary block mb-1 font-bold">100%</span>
+                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest text-[10px]">Fair Trade</span>
+            </div>
+            <div class="bg-surface-container-low rounded-xl p-6 text-center flex flex-col items-center justify-center shadow-[0_4px_24px_rgba(0,104,56,0.02)] border border-outline-variant/10">
+                <span class="material-symbols-outlined text-primary mb-2 opacity-80">water_drop</span>
+                <span class="font-headline-lg-mobile text-headline-lg-mobile text-primary block mb-1 font-bold font-bold">Zero</span>
+                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest text-[10px]">Toxic Runoff</span>
+            </div>
+            <div class="bg-surface-container-low rounded-xl p-6 text-center flex flex-col items-center justify-center shadow-[0_4px_24px_rgba(0,104,56,0.02)] border border-outline-variant/10">
+                <span class="material-symbols-outlined text-primary mb-2 opacity-80">volunteer_activism</span>
+                <span class="font-headline-lg-mobile text-headline-lg-mobile text-primary block mb-1 font-bold">3</span>
+                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest text-[10px]">Local Artisans</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join the Journey (Newsletter) -->
+    <section class="px-margin-mobile py-xl bg-secondary-container/30 text-center rounded-t-[40px] border-t border-outline-variant/10">
+        <h3 class="font-headline-md text-headline-md-mobile text-primary mb-2 font-bold">Join the Journey</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 px-4">
+            Subscribe for conscious living tips and early access to our new collections.
+        </p>
+        <form class="max-w-[300px] mx-auto flex flex-col gap-4" data-newsletter onsubmit="event.preventDefault()">
+            <div class="relative">
+                <input class="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:ring-0 focus:border-primary px-0 py-3 font-body-md text-on-surface placeholder:text-outline-variant transition-colors rounded-none" placeholder="Your email address" required type="email">
+            </div>
+            <button class="w-full bg-primary text-on-primary font-label-md text-label-md py-4 rounded-full hover:bg-primary-container transition-colors shadow-md active:scale-95 duration-200" type="submit">
+                Subscribe
+            </button>
+        </form>
+    </section>
+
+    <!-- Story Footer -->
+    <footer class="bg-surface px-margin-mobile pt-xl pb-24 border-t border-outline-variant/30">
+        <div class="flex flex-col gap-10">
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-md text-primary font-bold tracking-tight">The Green Room</span>
+                <p class="font-body-md text-on-surface-variant max-w-[280px] leading-relaxed">
+                    Honoring the heritage of the Dilmun civilization through conscious craftsmanship and sustainable design.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-x-gutter gap-y-10">
+                <div>
+                    <h4 class="font-label-md text-primary font-bold uppercase tracking-wider mb-4">Shop</h4>
+                    <ul class="flex flex-col gap-2 font-body-md text-on-surface-variant">
+                        <li><a href="collection.html" class="hover:text-primary transition-colors">New Arrivals</a></li>
+                        <li><a href="collection.html" class="hover:text-primary transition-colors">Best Sellers</a></li>
+                        <li><a href="collection.html" class="hover:text-primary transition-colors">Our Collection</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-primary font-bold uppercase tracking-wider mb-4">About</h4>
+                    <ul class="flex flex-col gap-2 font-body-md text-on-surface-variant">
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Sustainability</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-outline-variant/20 flex flex-col gap-2">
+                <p class="font-label-md text-[12px] text-outline">© 2024 The Green Room.</p>
+                <p class="font-label-md text-[12px] text-outline">Crafting a beautiful future.</p>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface/95 backdrop-blur-md border-t border-outline/10 px-margin-mobile py-3 flex justify-between items-center z-50">
+    <!-- Will be dynamically standardized by store.js -->
+</nav>
+
+</body>
+</html>

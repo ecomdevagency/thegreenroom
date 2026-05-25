@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Red Terra Tote - The Green Room</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ffc5a8",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#8ee4a8",
+                        "on-tertiary-fixed-variant": "#723612",
+                        "outline-variant": "#bec9be",
+                        "on-tertiary-fixed": "#341100",
+                        "surface-container-low": "#f6f3ee",
+                        "on-background": "#1c1c19",
+                        "secondary": "#645e4f",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#f0ede9",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#3f4940",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcdad5",
+                        "tertiary": "#6c320e",
+                        "surface-variant": "#e5e2dd",
+                        "on-primary-fixed-variant": "#00522b",
+                        "secondary-container": "#e8dfcc",
+                        "primary-container": "#006838",
+                        "on-secondary-container": "#696253",
+                        "on-primary-fixed": "#00210e",
+                        "on-surface": "#1c1c19",
+                        "on-secondary-fixed": "#1f1b10",
+                        "tertiary-container": "#8a4823",
+                        "surface-bright": "#fcf9f4",
+                        "on-primary": "#ffffff",
+                        "background": "#fcf9f4",
+                        "primary": "#004d28",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#0b6d3c",
+                        "on-secondary-fixed-variant": "#4c4638",
+                        "inverse-primary": "#83d99d",
+                        "secondary-fixed-dim": "#cfc6b3",
+                        "surface": "#fcf9f4",
+                        "secondary-fixed": "#ebe1cf",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#83d99d",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "surface-container-high": "#eae8e3",
+                        "primary-fixed": "#9ef5b8",
+                        "outline": "#6f7a70",
+                        "tertiary-fixed": "#ffdbcb",
+                        "inverse-on-surface": "#f3f0eb",
+                        "inverse-surface": "#31302d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-lg": ["Literata"],
+                        "body-md": ["Literata"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <!-- Shared dynamic store manager script -->
+    <script src="store.js" defer></script>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-sm dark:shadow-none flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 border-b border-outline/10">
+    <button aria-label="Menu" class="text-on-surface-variant hover:opacity-70 transition-opacity active:scale-95 transition-transform w-10 h-10 flex items-center justify-center rounded-full">
+        <span class="material-symbols-outlined" style="font-size: 24px; color: rgb(0, 104, 56);">menu</span>
+    </button>
+    <a href="index.html">
+        <h1 class="font-headline-md text-headline-md font-bold tracking-tight text-[#006838]">The Green Room</h1>
+    </a>
+    <button aria-label="Shopping Bag" class="text-on-surface-variant hover:opacity-70 transition-opacity active:scale-95 transition-transform w-10 h-10 flex items-center justify-center rounded-full">
+        <span class="material-symbols-outlined" style="font-size: 24px; color: rgb(0, 104, 56);">shopping_bag</span>
+    </button>
+</header>
+
+<!-- Main Content Area -->
+<main class="pt-16 pb-24 flex flex-col gap-lg">
+    <!-- Hero Product Image -->
+    <section class="w-full aspect-[4/5] bg-surface-container-low relative overflow-hidden">
+        <img id="pdp-hero-img" alt="Red Terra Tote - Sustainably crafted canvas bag" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAirX-FFYsnn_DIU7EAbhU8UFAC4NnScsuZVtF5ZEjoaeSauy7FNuqPlVb7xe0LRz43DdAgxvg1XmLttR8XjMeNHOc0Ppby9lemJ_wzlJ01aHDDf5btKNgkEmkTAFZLKEQXL2v7yWgtB-YKyNiWlptEQu7X-MDPumTnc3uNiTmWqVbVCrmaLtz9cYuH4q4MUH7c4L7hF4Fjc8o3tyEN8bm5U-Vfoea4gfFspiYk5D0-Vg8HN-FXEsK_kXR8mKfZX2fLcLk0eL5NT_PH">
+        <div class="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,104,56,0.05)] pointer-events-none"></div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="px-margin-mobile flex flex-col gap-base">
+        <div class="flex justify-between items-start gap-md">
+            <h2 id="pdp-title" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">Red Tote</h2>
+            <span id="pdp-price" class="font-headline-md text-headline-md text-primary font-bold">BHD 0.000</span>
+        </div>
+        <div id="pdp-inventory-badge" class="mt-1"></div>
+        <p id="pdp-description" class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            The definitive everyday carry, reimagined in a warm terracotta clay. Crafted from durable, sustainably sourced materials with an earthy warmth that wears beautifully over time. Spacious enough for your daily essentials, yet refined for any setting.
+        </p>
+    </section>
+
+    <!-- Add to Bag Actions -->
+    <section class="px-margin-mobile flex flex-col gap-md mb-4">
+        <div class="flex items-center gap-3">
+            <button id="pdp-add-to-bag" class="flex-grow bg-[#006838] text-on-primary font-bold py-4 rounded-xl text-center font-label-md text-label-md uppercase tracking-wider hover:opacity-90 active:scale-[0.98] transition-all shadow-md">
+                Add to Bag
+            </button>
+            <button aria-label="Save for later" class="w-14 h-14 flex-none rounded-xl border border-outline-variant flex items-center justify-center text-on-surface-variant bg-surface-container-low active:bg-surface-container transition-colors shadow-sm">
+                <span class="material-symbols-outlined text-[24px]">bookmark</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Details Grid (Bento Style) -->
+    <section class="px-margin-mobile grid grid-cols-1 gap-md">
+        <!-- Materials & Care Card -->
+        <div class="bg-surface-container-low rounded-xl p-md flex flex-col gap-sm border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-2">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">eco</span>
+                <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Materials &amp; Care</h3>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1.5 rounded-full bg-primary-container/10 border border-primary/10 font-label-md text-label-md text-primary font-medium text-xs">100% Organic Cotton</span>
+                <span class="px-3 py-1.5 rounded-full bg-primary-container/10 border border-primary/10 font-label-md text-label-md text-primary font-medium text-xs">Plant-Based Dyes</span>
+            </div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+                <li class="flex gap-3">
+                    <span class="material-symbols-outlined text-primary/60 text-[18px] shrink-0">check_circle</span>
+                    <span>Spot clean with a damp cloth and mild soap.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="material-symbols-outlined text-primary/60 text-[18px] shrink-0">check_circle</span>
+                    <span>Air dry away from direct sunlight to preserve vibrancy.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Impact Metrics -->
+        <div class="grid grid-cols-2 gap-sm">
+            <div class="bg-surface-container border border-outline-variant/20 rounded-xl p-sm flex flex-col items-center text-center gap-xs justify-center shadow-sm aspect-square">
+                <span class="material-symbols-outlined text-primary text-[32px] mb-1">water_drop</span>
+                <span class="font-headline-md text-headline-md text-on-surface font-bold">14L</span>
+                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest text-[10px]">Water Saved</span>
+            </div>
+            <div class="bg-surface-container border border-outline-variant/20 rounded-xl p-sm flex flex-col items-center text-center gap-xs justify-center shadow-sm aspect-square">
+                <span class="material-symbols-outlined text-primary text-[32px] mb-1">co2</span>
+                <span class="font-headline-md text-headline-md text-on-surface font-bold">5.2kg</span>
+                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest text-[10px]">Carbon Offset</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="pl-margin-mobile flex flex-col gap-md overflow-hidden">
+        <div class="pr-margin-mobile">
+            <h3 class="font-headline-md text-headline-md text-on-surface font-bold">You May Also Like</h3>
+        </div>
+        <div class="flex gap-md overflow-x-auto hide-scrollbar pb-sm pr-margin-mobile snap-x">
+            <!-- Rec Item 1 -->
+            <a href="green-tote.html" class="flex-none w-[200px] snap-start group flex flex-col gap-xs cursor-pointer block">
+                <div>
+                    <div class="w-full aspect-square bg-surface-container rounded-lg overflow-hidden relative border border-outline-variant/10 shadow-sm">
+                        <img alt="Alternative sustainable bag option" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4iDTklygtlJaOLjGOS_8lAquoZiHZ0mBPjgX4Ru_T4puyqEowRtgMFy6Jtj2bc_-bLE3Xo_Nz4k6XMUJUIqvvjiniZ_7bxDJouzwJvSm3uOaRHG-IsAI2ovr4YghhF4Yi_AxVVNgDVJI4mjTMVA2DBdT7eNQHRRk19EtoKGst9YRs-1rMjrEW96XUNKKTMPKCYs10Ba4kPoHTXuZRjK8iqaZ6WYHkw_TJJGSmvrtxXaOUggJwvAgW8n9-o9hNd9AeTimJ6LZrfGHB">
+                    </div>
+                    <div class="pt-xs">
+                        <h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors font-semibold">Green Tote</h4>
+                        <span class="font-body-md text-body-md text-on-surface-variant text-sm">$145.00</span>
+                    </div>
+                </div>
+            </a>
+            <!-- Rec Item 2 -->
+            <a href="blue-tote.html" class="flex-none w-[200px] snap-start group flex flex-col gap-xs cursor-pointer block">
+                <div>
+                    <div class="w-full aspect-square bg-surface-container rounded-lg overflow-hidden relative border border-outline-variant/10 shadow-sm">
+                        <img alt="Alternative sustainable bag option" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAYfzuSD0vlq2-qfV-BBox0EOA95KlRS-5wZJCRiDKnVRZETn9nxiVZJt5QILJvnNGgRcXXIyEnIR-NzEqvpSC8vCeT1pub9j7C_yL15FdqL03QT2ef5Pq7_2cs16WmgksqAXZKZWUm-Pm55WiCC8OcVemxp1J9lYNw8Hx-v7EdzIs1RKn8Ll-ULypgoZOrNG3kProZvUllpdbHqlAkeylpB9FKz_66nXAVymcA3_LjKLP212UMWdKx7YP_HycFdwtAK_1fL7JHaqTHbE">
+                    </div>
+                    <div class="pt-xs">
+                        <h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors font-semibold">Blue Tote</h4>
+                        <span class="font-body-md text-body-md text-on-surface-variant text-sm">$145.00</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-lg pb-24 px-margin-mobile flex flex-col gap-lg">
+        <div class="flex flex-col gap-base">
+            <h2 class="font-headline-md text-headline-md text-primary font-bold">The Green Room</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-sm text-sm">
+                Crafting sustainable essentials for a conscious lifestyle. Every piece tells a story of ethical production and enduring design.
+            </p>
+        </div>
+        <div class="grid grid-cols-2 gap-y-lg gap-x-md">
+            <div class="flex flex-col gap-md">
+                <h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest text-xs font-bold">Shop</h3>
+                <ul class="flex flex-col gap-sm text-body-md text-on-surface-variant text-sm">
+                    <li><a href="collection.html" class="hover:text-primary">New Arrivals</a></li>
+                    <li><a href="collection.html" class="hover:text-primary">Best Sellers</a></li>
+                    <li><a href="collection.html" class="hover:text-primary">Totes</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-md">
+                <h3 class="font-label-md text-label-md text-on-surface uppercase tracking-widest text-xs font-bold">About</h3>
+                <ul class="flex flex-col gap-sm text-body-md text-on-surface-variant text-sm">
+                    <li><a href="about.html" class="hover:text-primary">Our Story</a></li>
+                    <li><a href="about.html" class="hover:text-primary">Sustainability</a></li>
+                    <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-lg border-t border-outline-variant/10">
+            <p class="text-[12px] font-label-md text-on-surface-variant/70">© 2024 The Green Room. All rights reserved.</p>
+        </div>
+    </footer>
+</main>
+
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full bg-surface/95 backdrop-blur-md border-t border-outline/10 px-margin-mobile py-3 flex justify-between items-center z-50">
+    <!-- Will be dynamically standardized by store.js -->
+</nav>
+
+</body>
+</html>
