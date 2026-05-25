@@ -406,11 +406,11 @@ function injectGlobalDrawers() {
 
   // Menu Drawer (Left)
   if (!document.getElementById('global-menu-drawer')) {
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const isHome = currentPath === 'index.html' || currentPath === '' || currentPath === 'index';
-    const isShop = currentPath === 'collection.html' || currentPath === 'collection';
-    const isStory = currentPath === 'about.html' || currentPath === 'about';
-    const isContact = currentPath === 'contact.html' || currentPath === 'contact';
+    const pathSegment = (window.location.pathname.split('/').filter(Boolean).pop() || '').toLowerCase();
+    const isHome = pathSegment === 'index' || pathSegment === 'index.html' || pathSegment === '' || (!pathSegment.includes('collection') && !pathSegment.includes('about') && !pathSegment.includes('contact') && !pathSegment.includes('tote'));
+    const isShop = pathSegment.includes('collection');
+    const isStory = pathSegment.includes('about');
+    const isContact = pathSegment.includes('contact');
 
     const menuDrawer = document.createElement('nav');
     menuDrawer.id = 'global-menu-drawer';
@@ -418,7 +418,7 @@ function injectGlobalDrawers() {
     menuDrawer.className = 'fixed top-0 left-0 h-full w-80 bg-surface rounded-r-2xl shadow-2xl border-r border-outline-variant/15 z-[100] flex flex-col p-6 transition-transform duration-300 ease-in-out -translate-x-full';
     menuDrawer.innerHTML = `
       <div class="flex items-center justify-between py-6">
-        <h2 class="font-headline-md text-primary font-bold tracking-widest uppercase">THE GREEN ROOM</h2>
+        <h2 style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px;" class="text-primary tracking-wide">The Green Room</h2>
         <button id="close-menu-btn" aria-label="Close menu" class="text-on-surface-variant hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-container-high">
           <span class="material-symbols-outlined text-2xl">close</span>
         </button>
@@ -607,43 +607,10 @@ function bindHeaderAndFooter() {
     btn.addEventListener('click', () => toggleCartDrawer(true));
   });
 
-  // Bottom Nav
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  // Remove Bottom Nav
   document.querySelectorAll('nav[class*="bottom-0"], div[class*="bottom-0"]').forEach(nav => {
-    if (nav.id !== 'global-bottom-nav') nav.remove();
+    nav.remove();
   });
-
-  let bottomNav = document.getElementById('global-bottom-nav');
-  if (!bottomNav) {
-    bottomNav = document.createElement('nav');
-    bottomNav.id = 'global-bottom-nav';
-    document.body.appendChild(bottomNav);
-  }
-
-  const isHome = currentPath === 'index.html' || currentPath === '' || currentPath === 'index';
-  const isShop = currentPath === 'collection.html' || currentPath === 'collection';
-  const isStory = currentPath === 'about.html' || currentPath === 'about';
-  const isContact = currentPath === 'contact.html' || currentPath === 'contact';
-
-  bottomNav.className = 'md:hidden fixed bottom-0 left-0 right-0 bg-surface/95 backdrop-blur-lg border-t border-outline-variant/15 px-margin-mobile pb-safe pt-2.5 flex justify-between items-center z-[80] shadow-[0_-4px_24px_rgba(0,104,56,0.03)]';
-  bottomNav.innerHTML = `
-    <a href="index.html" class="flex flex-col items-center justify-center p-1.5 flex-1 transition-all ${isHome ? 'text-primary scale-105 font-semibold' : 'text-on-surface-variant hover:text-primary'}">
-      <span class="material-symbols-outlined text-[24px] mb-1" style="font-variation-settings: 'FILL' ${isHome ? '1' : '0'};">home</span>
-      <span class="text-[10px] tracking-wider uppercase font-label-md">Home</span>
-    </a>
-    <a href="collection.html" class="flex flex-col items-center justify-center p-1.5 flex-1 transition-all ${isShop ? 'text-primary scale-105 font-semibold' : 'text-on-surface-variant hover:text-primary'}">
-      <span class="material-symbols-outlined text-[24px] mb-1" style="font-variation-settings: 'FILL' ${isShop ? '1' : '0'};">storefront</span>
-      <span class="text-[10px] tracking-wider uppercase font-label-md">Shop</span>
-    </a>
-    <a href="about.html" class="flex flex-col items-center justify-center p-1.5 flex-1 transition-all ${isStory ? 'text-primary scale-105 font-semibold' : 'text-on-surface-variant hover:text-primary'}">
-      <span class="material-symbols-outlined text-[24px] mb-1" style="font-variation-settings: 'FILL' ${isStory ? '1' : '0'};">auto_stories</span>
-      <span class="text-[10px] tracking-wider uppercase font-label-md">Story</span>
-    </a>
-    <a href="contact.html" class="flex flex-col items-center justify-center p-1.5 flex-1 transition-all ${isContact ? 'text-primary scale-105 font-semibold' : 'text-on-surface-variant hover:text-primary'}">
-      <span class="material-symbols-outlined text-[24px] mb-1" style="font-variation-settings: 'FILL' ${isContact ? '1' : '0'};">mail</span>
-      <span class="text-[10px] tracking-wider uppercase font-label-md">Contact</span>
-    </a>
-  `;
 }
 
 // ─── Product Detail Page Hydration ────────────────────────────────────────────
@@ -970,24 +937,24 @@ document.addEventListener('DOMContentLoaded', () => {
   bindContactForm();
   bindNewsletterForms();
 
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const pathSegment = (window.location.pathname.split('/').filter(Boolean).pop() || '').toLowerCase();
 
   // Product detail pages (Non-blocking background hydration)
-  if (currentPath.includes('green-tote')) {
+  if (pathSegment.includes('green-tote')) {
     hydrateProductPage('green-tote');
-  } else if (currentPath.includes('blue-tote')) {
+  } else if (pathSegment.includes('blue-tote')) {
     hydrateProductPage('blue-tote');
-  } else if (currentPath.includes('red-tote')) {
+  } else if (pathSegment.includes('red-tote')) {
     hydrateProductPage('red-tote');
   }
 
   // Collection page (Non-blocking background hydration)
-  if (currentPath.includes('collection')) {
+  if (pathSegment.includes('collection')) {
     hydrateCollectionPage();
   }
 
   // Home page (SWR optimistic rendering)
-  if (currentPath === 'index.html' || currentPath === '') {
+  if (pathSegment === 'index' || pathSegment === 'index.html' || pathSegment === '' || (!pathSegment.includes('collection') && !pathSegment.includes('about') && !pathSegment.includes('contact') && !pathSegment.includes('tote'))) {
     // 1. Instantly hydrate from cache (0ms delay)
     hydrateHomePage();
 
