@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Fredoka:wght@600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
@@ -82,6 +82,7 @@
                         "safe": "env(safe-area-inset-bottom)"
                     },
                     "fontFamily": {
+                        "fredoka": ["Fredoka", "sans-serif"],
                         "label-md": ["Plus Jakarta Sans"],
                         "body-md": ["Literata"],
                         "headline-lg": ["Plus Jakarta Sans"],
@@ -123,7 +124,7 @@
     <!-- Shared dynamic logic script -->
     <script src="store.js" defer></script>
 </head>
-<body class="bg-surface text-on-surface bg-grain min-h-screen pb-24 font-body-md text-body-md antialiased selection:bg-primary/20 selection:text-primary">
+<body class="bg-surface text-on-surface bg-grain min-h-screen pb-8 font-body-md text-body-md antialiased selection:bg-primary/20 selection:text-primary">
 
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-sm dark:shadow-none bg-surface dark:bg-surface text-primary">
@@ -132,7 +133,7 @@
             <span class="material-symbols-outlined" style="font-size: 24px; color: rgb(0, 104, 56);">menu</span>
         </button>
         <a href="index.html">
-            <h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary">The Green Room</h1>
+            <h1 class="font-fredoka font-semibold tracking-tight text-primary text-[22px]">The Green Room</h1>
         </a>
         <button aria-label="Shopping Bag" class="text-on-surface-variant hover:opacity-70 transition-opacity active:scale-95 transition-transform">
             <span class="material-symbols-outlined" style="font-size: 24px; color: rgb(0, 104, 56);">shopping_bag</span>
@@ -221,10 +222,10 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-surface-container-low px-margin-mobile pt-lg pb-32 mt-xl border-t border-outline/10">
+<footer class="bg-surface-container-low px-margin-mobile pt-lg pb-12 mt-xl border-t border-outline/10">
     <div class="max-w-screen-xl mx-auto">
         <div class="mb-lg">
-            <h2 class="font-headline-md text-primary mb-sm">The Green Room</h2>
+            <h2 class="font-fredoka font-semibold text-primary mb-sm text-[20px]">The Green Room</h2>
             <p class="font-body-md text-on-surface-variant max-w-xs leading-relaxed">
                 Curating sustainable essentials for a mindful lifestyle. Ethically sourced, beautifully designed.
             </p>
@@ -261,10 +262,7 @@
     </div>
 </footer>
 
-<!-- BottomNavBar (Mobile) -->
-<nav class="fixed bottom-0 left-0 w-full z-[60] bg-surface/90 backdrop-blur-lg border-t border-outline/10 px-margin-mobile pb-safe pt-2">
-    <!-- Will be dynamically standardized by store.js -->
-</nav>
+
 
 </body>
 </html>
