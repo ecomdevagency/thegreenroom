@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Fredoka:wght@600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
@@ -81,6 +81,7 @@
                         "gutter": "24px"
                     },
                     "fontFamily": {
+                        "fredoka": ["Fredoka", "sans-serif"],
                         "headline-md": ["Plus Jakarta Sans"],
                         "headline-xl": ["Plus Jakarta Sans"],
                         "headline-lg-mobile": ["Plus Jakarta Sans"],
@@ -127,7 +128,7 @@
         <span class="material-symbols-outlined" style="font-size: 24px; color: rgb(0, 104, 56);">menu</span>
     </button>
     <a href="index.html">
-        <h1 class="font-headline-md text-headline-md font-bold tracking-tight text-[#006838]">The Green Room</h1>
+        <h1 class="font-fredoka font-semibold tracking-tight text-[#006838] text-[22px]">The Green Room</h1>
     </a>
     <button aria-label="Shopping Bag" class="text-on-surface-variant hover:opacity-70 transition-opacity active:scale-95 transition-transform w-10 h-10 flex items-center justify-center rounded-full">
         <span class="material-symbols-outlined" style="font-size: 24px; color: rgb(0, 104, 56);">shopping_bag</span>
@@ -135,7 +136,7 @@
 </header>
 
 <!-- Main Content Area -->
-<main class="pt-16 pb-24 flex flex-col gap-lg">
+<main class="pt-16 pb-8 flex flex-col gap-lg">
     <!-- Hero Product Image -->
     <section class="w-full aspect-[4/5] bg-surface-container-low relative overflow-hidden">
         <img id="pdp-hero-img" alt="Essential Forest Tote - Sustainably crafted canvas bag" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4iDTklygtlJaOLjGOS_8lAquoZiHZ0mBPjgX4Ru_T4puyqEowRtgMFy6Jtj2bc_-bLE3Xo_Nz4k6XMUJUIqvvjiniZ_7bxDJouzwJvSm3uOaRHG-IsAI2ovr4YghhF4Yi_AxVVNgDVJI4mjTMVA2DBdT7eNQHRRk19EtoKGst9YRs-1rMjrEW96XUNKKTMPKCYs10Ba4kPoHTXuZRjK8iqaZ6WYHkw_TJJGSmvrtxXaOUggJwvAgW8n9-o9hNd9AeTimJ6LZrfGHB">
@@ -239,9 +240,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-lg pb-24 px-margin-mobile flex flex-col gap-lg">
+    <footer class="bg-surface-container-low border-t border-outline-variant/20 pt-lg pb-12 px-margin-mobile flex flex-col gap-lg">
         <div class="flex flex-col gap-base">
-            <h2 class="font-headline-md text-headline-md text-primary font-bold">The Green Room</h2>
+            <h2 class="font-fredoka font-semibold text-primary font-bold text-[20px]">The Green Room</h2>
             <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-sm text-sm">
                 Crafting sustainable essentials for a conscious lifestyle. Every piece tells a story of ethical production and enduring design.
             </p>
@@ -270,10 +271,7 @@
     </footer>
 </main>
 
-<!-- BottomNavBar (Mobile) -->
-<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md border-t border-outline/10 px-margin-mobile py-3 flex justify-between items-center z-50">
-    <!-- Will be dynamically standardized by store.js -->
-</nav>
+
 
 </body>
 </html>
